@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SideNav from './components/SideNav';
+import Form from './components/Form';
+import Table from './components/Table';
 
 function App() {
+
+  const [entry, handleEntry] = useState({});
+
+  const passForm = form => {
+    console.log('hole');
+    handleEntry(form);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="sidenav">
+        <SideNav />
+      </div>
+      <div className="container">
+        <div>
+          <Form passForm={passForm}/>
+        </div>
+        <div>
+          <Table entry={entry} />
+        </div>
+      </div>
     </div>
   );
 }

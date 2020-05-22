@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding:0;
+}
+.sidenav {
+  position: fixed;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 15%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 85%;
+  margin-left:15%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-component {
+  padding: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-component label {
+  width: 15%;
+  display:inline-block;
+  line-height: 2em;
+  font-size: 20px;
+}
+
+.form-component input {
+  width: 25%;
+  display:inline-block;
+  margin-right: 40px;
+  line-height: 2em;
+  border-style: hidden hidden dashed hidden;
+  font-size: 15px;
+}
+
+.form-component button {
+  margin-top: 30px;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: 15%;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.table-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;;
+  height: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.table-item {
+  flex-grow: 1;
+  flex: 1;
+}
+
+.table-name {
+  background-color: rgb(182, 72, 9);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.table-title {
+  background-color: rgb(177, 165, 165);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
